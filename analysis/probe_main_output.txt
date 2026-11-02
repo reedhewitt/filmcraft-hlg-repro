@@ -1,0 +1,24 @@
+# Output of analysis/filmcraft_probe.rs run against main 8c171a0a on 2026-11-01
+# Probe vs measured FilmCraft (out/results.json), 8-bit sRGB, probe minus measured:
+#   greys 10..100 %: within -3..+2 on every channel; colours: within -2..+3. Worst abs diff 3.
+# (cargo test -p filmcraft-color --test hlg_probe_tmp -- --nocapture). Real InputTransform, pattern patches.
+PROBE grey10       signal [0.1005, 0.1005, 0.1005] -> working [0.0053, 0.0053, 0.0053] -> sRGB8 [16, 16, 16]
+PROBE grey20       signal [0.1998, 0.1998, 0.1998] -> working [0.0276, 0.0276, 0.0276] -> sRGB8 [46, 46, 46]
+PROBE grey30       signal [0.3002, 0.3002, 0.3002] -> working [0.0734, 0.0734, 0.0734] -> sRGB8 [77, 77, 77]
+PROBE grey40       signal [0.3995, 0.3995, 0.3995] -> working [0.1458, 0.1458, 0.1458] -> sRGB8 [107, 107, 107]
+PROBE grey50       signal [0.5000, 0.5000, 0.5000] -> working [0.2497, 0.2497, 0.2497] -> sRGB8 [137, 137, 137]
+PROBE grey60       signal [0.6005, 0.6005, 0.6005] -> working [0.4190, 0.4190, 0.4190] -> sRGB8 [173, 173, 173]
+PROBE grey70       signal [0.6998, 0.6998, 0.6998] -> working [0.6664, 0.6664, 0.6664] -> sRGB8 [213, 213, 213]
+PROBE grey80       signal [0.8002, 0.8002, 0.8002] -> working [0.8793, 0.8793, 0.8793] -> sRGB8 [241, 241, 241]
+PROBE grey90       signal [0.8995, 0.8995, 0.8995] -> working [0.9829, 0.9829, 0.9829] -> sRGB8 [253, 253, 253]
+PROBE grey100      signal [1.0000, 1.0000, 1.0000] -> working [1.0000, 1.0000, 1.0000] -> sRGB8 [255, 255, 255]
+PROBE red75        signal [0.7505, 0.0005, 0.0001] -> working [0.6278, 0.0000, 0.0374] -> sRGB8 [208, 0, 54]
+PROBE green75      signal [-0.0005, 0.7495, -0.0002] -> working [0.0000, 0.6500, 0.1840] -> sRGB8 [0, 211, 119]
+PROBE blue75       signal [0.0001, 0.0000, 0.7500] -> working [0.0000, 0.0156, 0.2880] -> sRGB8 [0, 33, 146]
+PROBE skin         signal [0.6803, 0.5506, 0.4707] -> working [0.6955, 0.2629, 0.1957] -> sRGB8 [217, 140, 122]
+PROBE foliage      signal [0.3992, 0.5196, 0.2985] -> working [0.0973, 0.2813, 0.0684] -> sRGB8 [88, 145, 74]
+PROBE denim        signal [0.2809, 0.3099, 0.4491] -> working [0.0496, 0.0805, 0.1776] -> sRGB8 [63, 80, 117]
+PROBE lit_skin     signal [0.8095, 0.7100, 0.5592] -> working [0.9316, 0.4018, 0.1833] -> sRGB8 [247, 170, 119]
+PROBE bark         signal [0.7599, 0.7497, 0.7101] -> working [0.8162, 0.7369, 0.5903] -> sRGB8 [233, 223, 202]
+PROBE warm_hilite  signal [0.9403, 0.8607, 0.7400] -> working [0.9993, 0.4885, 0.2444] -> sRGB8 [255, 186, 136]
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

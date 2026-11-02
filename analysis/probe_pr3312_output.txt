@@ -1,0 +1,22 @@
+# Output of analysis/filmcraft_probe.rs run against PR 3312 head aaded55a (branch 3305, base 142fddc1) on 2026-11-01
+# (cargo test -p filmcraft-color --test hlg_probe_tmp -- --nocapture). Real InputTransform, pattern patches.
+PROBE grey10       signal [0.1005, 0.1005, 0.1005] -> working [0.0041, 0.0041, 0.0041] -> sRGB8 [13, 13, 13]
+PROBE grey20       signal [0.1998, 0.1998, 0.1998] -> working [0.0187, 0.0187, 0.0187] -> sRGB8 [37, 37, 37]
+PROBE grey30       signal [0.3002, 0.3002, 0.3002] -> working [0.0445, 0.0445, 0.0445] -> sRGB8 [60, 60, 60]
+PROBE grey40       signal [0.3995, 0.3995, 0.3995] -> working [0.0808, 0.0808, 0.0808] -> sRGB8 [80, 80, 80]
+PROBE grey50       signal [0.5000, 0.5000, 0.5000] -> working [0.1280, 0.1280, 0.1280] -> sRGB8 [100, 100, 100]
+PROBE grey60       signal [0.6005, 0.6005, 0.6005] -> working [0.1980, 0.1980, 0.1980] -> sRGB8 [123, 123, 123]
+PROBE grey70       signal [0.6998, 0.6998, 0.6998] -> working [0.3174, 0.3174, 0.3174] -> sRGB8 [153, 153, 153]
+PROBE grey80       signal [0.8002, 0.8002, 0.8002] -> working [0.5092, 0.5092, 0.5092] -> sRGB8 [189, 189, 189]
+PROBE grey90       signal [0.8995, 0.8995, 0.8995] -> working [0.7474, 0.7474, 0.7474] -> sRGB8 [224, 224, 224]
+PROBE grey100      signal [1.0000, 1.0000, 1.0000] -> working [1.0000, 1.0000, 1.0000] -> sRGB8 [255, 255, 255]
+PROBE red75        signal [0.7505, 0.0005, 0.0001] -> working [0.4665, 0.0000, 0.0278] -> sRGB8 [182, 0, 46]
+PROBE green75      signal [-0.0005, 0.7495, -0.0002] -> working [0.0000, 0.3832, 0.1085] -> sRGB8 [0, 166, 93]
+PROBE blue75       signal [0.0001, 0.0000, 0.7500] -> working [0.0000, 0.0114, 0.2107] -> sRGB8 [0, 28, 127]
+PROBE skin         signal [0.6803, 0.5506, 0.4707] -> working [0.3518, 0.1425, 0.1089] -> sRGB8 [160, 105, 93]
+PROBE foliage      signal [0.3992, 0.5196, 0.2985] -> working [0.0564, 0.1439, 0.0413] -> sRGB8 [67, 106, 57]
+PROBE denim        signal [0.2809, 0.3099, 0.4491] -> working [0.0314, 0.0483, 0.1002] -> sRGB8 [50, 62, 89]
+PROBE lit_skin     signal [0.8095, 0.7100, 0.5592] -> working [0.6683, 0.3060, 0.1517] -> sRGB8 [213, 150, 109]
+PROBE bark         signal [0.7599, 0.7497, 0.7101] -> working [0.4419, 0.4025, 0.3292] -> sRGB8 [177, 170, 155]
+PROBE warm_hilite  signal [0.9403, 0.8607, 0.7400] -> working [1.1439, 0.5893, 0.3167] -> sRGB8 [255, 202, 153]
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

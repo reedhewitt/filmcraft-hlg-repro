@@ -1,0 +1,842 @@
+{
+ "pattern": {
+  "sequenceColor": {
+   "autoToneMap": true,
+   "label": "Rec. 709",
+   "wideGamut": false,
+   "workingSpace": "rec709"
+  },
+  "patches": [
+   {
+    "patch": "grey0",
+    "hlg_rgb_signal": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "filmcraft": [
+     2,
+     0,
+     2
+    ],
+    "ffmpeg_hable": [
+     2,
+     0,
+     2
+    ],
+    "ffmpeg_clip": [
+     2,
+     0,
+     2
+    ],
+    "apple": [
+     2,
+     0,
+     2
+    ]
+   },
+   {
+    "patch": "grey10",
+    "hlg_rgb_signal": [
+     0.1,
+     0.1,
+     0.1
+    ],
+    "filmcraft": [
+     18,
+     16,
+     19
+    ],
+    "ffmpeg_hable": [
+     21,
+     19,
+     22
+    ],
+    "ffmpeg_clip": [
+     31,
+     28,
+     31
+    ],
+    "apple": [
+     24,
+     21,
+     24
+    ]
+   },
+   {
+    "patch": "grey20",
+    "hlg_rgb_signal": [
+     0.2,
+     0.2,
+     0.2
+    ],
+    "filmcraft": [
+     48,
+     45,
+     49
+    ],
+    "ffmpeg_hable": [
+     40,
+     37,
+     41
+    ],
+    "ffmpeg_clip": [
+     58,
+     55,
+     58
+    ],
+    "apple": [
+     46,
+     43,
+     46
+    ]
+   },
+   {
+    "patch": "grey30",
+    "hlg_rgb_signal": [
+     0.3,
+     0.3,
+     0.3
+    ],
+    "filmcraft": [
+     77,
+     75,
+     78
+    ],
+    "ffmpeg_hable": [
+     60,
+     57,
+     60
+    ],
+    "ffmpeg_clip": [
+     88,
+     85,
+     88
+    ],
+    "apple": [
+     66,
+     63,
+     66
+    ]
+   },
+   {
+    "patch": "grey40",
+    "hlg_rgb_signal": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "filmcraft": [
+     109,
+     106,
+     109
+    ],
+    "ffmpeg_hable": [
+     77,
+     75,
+     78
+    ],
+    "ffmpeg_clip": [
+     117,
+     114,
+     117
+    ],
+    "apple": [
+     82,
+     79,
+     82
+    ]
+   },
+   {
+    "patch": "grey50",
+    "hlg_rgb_signal": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "filmcraft": [
+     139,
+     136,
+     139
+    ],
+    "ffmpeg_hable": [
+     97,
+     94,
+     98
+    ],
+    "ffmpeg_clip": [
+     146,
+     143,
+     146
+    ],
+    "apple": [
+     99,
+     96,
+     99
+    ]
+   },
+   {
+    "patch": "grey60",
+    "hlg_rgb_signal": [
+     0.6,
+     0.6,
+     0.6
+    ],
+    "filmcraft": [
+     175,
+     172,
+     176
+    ],
+    "ffmpeg_hable": [
+     117,
+     114,
+     117
+    ],
+    "ffmpeg_clip": [
+     180,
+     177,
+     180
+    ],
+    "apple": [
+     117,
+     114,
+     117
+    ]
+   },
+   {
+    "patch": "grey70",
+    "hlg_rgb_signal": [
+     0.7,
+     0.7,
+     0.7
+    ],
+    "filmcraft": [
+     215,
+     212,
+     215
+    ],
+    "ffmpeg_hable": [
+     144,
+     141,
+     144
+    ],
+    "ffmpeg_clip": [
+     245,
+     242,
+     245
+    ],
+    "apple": [
+     140,
+     138,
+     141
+    ]
+   },
+   {
+    "patch": "grey80",
+    "hlg_rgb_signal": [
+     0.8,
+     0.8,
+     0.8
+    ],
+    "filmcraft": [
+     242,
+     239,
+     243
+    ],
+    "ffmpeg_hable": [
+     175,
+     172,
+     176
+    ],
+    "ffmpeg_clip": [
+     255,
+     254,
+     255
+    ],
+    "apple": [
+     173,
+     170,
+     173
+    ]
+   },
+   {
+    "patch": "grey90",
+    "hlg_rgb_signal": [
+     0.9,
+     0.9,
+     0.9
+    ],
+    "filmcraft": [
+     254,
+     251,
+     255
+    ],
+    "ffmpeg_hable": [
+     207,
+     204,
+     207
+    ],
+    "ffmpeg_clip": [
+     255,
+     254,
+     255
+    ],
+    "apple": [
+     209,
+     207,
+     210
+    ]
+   },
+   {
+    "patch": "grey100",
+    "hlg_rgb_signal": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "filmcraft": [
+     255,
+     254,
+     255
+    ],
+    "ffmpeg_hable": [
+     234,
+     232,
+     235
+    ],
+    "ffmpeg_clip": [
+     255,
+     254,
+     255
+    ],
+    "apple": [
+     254,
+     251,
+     255
+    ]
+   },
+   {
+    "patch": "red75",
+    "hlg_rgb_signal": [
+     0.75,
+     0,
+     0
+    ],
+    "filmcraft": [
+     208,
+     1,
+     53
+    ],
+    "ffmpeg_hable": [
+     185,
+     1,
+     0
+    ],
+    "ffmpeg_clip": [
+     254,
+     0,
+     1
+    ],
+    "apple": [
+     200,
+     0,
+     0
+    ]
+   },
+   {
+    "patch": "green75",
+    "hlg_rgb_signal": [
+     0,
+     0.75,
+     0
+    ],
+    "filmcraft": [
+     0,
+     212,
+     121
+    ],
+    "ffmpeg_hable": [
+     0,
+     164,
+     0
+    ],
+    "ffmpeg_clip": [
+     2,
+     253,
+     0
+    ],
+    "apple": [
+     3,
+     161,
+     3
+    ]
+   },
+   {
+    "patch": "blue75",
+    "hlg_rgb_signal": [
+     0,
+     0,
+     0.75
+    ],
+    "filmcraft": [
+     0,
+     33,
+     148
+    ],
+    "ffmpeg_hable": [
+     1,
+     1,
+     165
+    ],
+    "ffmpeg_clip": [
+     0,
+     1,
+     255
+    ],
+    "apple": [
+     1,
+     1,
+     169
+    ]
+   },
+   {
+    "patch": "cyan75",
+    "hlg_rgb_signal": [
+     0,
+     0.75,
+     0.75
+    ],
+    "filmcraft": [
+     2,
+     212,
+     210
+    ],
+    "ffmpeg_hable": [
+     0,
+     162,
+     157
+    ],
+    "ffmpeg_clip": [
+     0,
+     255,
+     247
+    ],
+    "apple": [
+     1,
+     163,
+     158
+    ]
+   },
+   {
+    "patch": "magenta75",
+    "hlg_rgb_signal": [
+     0.75,
+     0,
+     0.75
+    ],
+    "filmcraft": [
+     213,
+     0,
+     182
+    ],
+    "ffmpeg_hable": [
+     180,
+     0,
+     152
+    ],
+    "ffmpeg_clip": [
+     255,
+     145,
+     233
+    ],
+    "apple": [
+     191,
+     0,
+     165
+    ]
+   },
+   {
+    "patch": "yellow75",
+    "hlg_rgb_signal": [
+     0.75,
+     0.75,
+     0
+    ],
+    "filmcraft": [
+     230,
+     226,
+     0
+    ],
+    "ffmpeg_hable": [
+     160,
+     157,
+     0
+    ],
+    "ffmpeg_clip": [
+     254,
+     251,
+     4
+    ],
+    "apple": [
+     159,
+     154,
+     3
+    ]
+   },
+   {
+    "patch": "skin",
+    "hlg_rgb_signal": [
+     0.68,
+     0.55,
+     0.47
+    ],
+    "filmcraft": [
+     215,
+     141,
+     120
+    ],
+    "ffmpeg_hable": [
+     152,
+     95,
+     80
+    ],
+    "ffmpeg_clip": [
+     246,
+     151,
+     131
+    ],
+    "apple": [
+     154,
+     97,
+     89
+    ]
+   },
+   {
+    "patch": "foliage",
+    "hlg_rgb_signal": [
+     0.4,
+     0.52,
+     0.3
+    ],
+    "filmcraft": [
+     88,
+     145,
+     74
+    ],
+    "ffmpeg_hable": [
+     57,
+     102,
+     51
+    ],
+    "ffmpeg_clip": [
+     85,
+     155,
+     74
+    ],
+    "apple": [
+     61,
+     103,
+     53
+    ]
+   },
+   {
+    "patch": "denim",
+    "hlg_rgb_signal": [
+     0.28,
+     0.31,
+     0.45
+    ],
+    "filmcraft": [
+     62,
+     79,
+     114
+    ],
+    "ffmpeg_hable": [
+     46,
+     59,
+     89
+    ],
+    "ffmpeg_clip": [
+     69,
+     90,
+     133
+    ],
+    "apple": [
+     49,
+     62,
+     92
+    ]
+   },
+   {
+    "patch": "lit_skin",
+    "hlg_rgb_signal": [
+     0.81,
+     0.71,
+     0.56
+    ],
+    "filmcraft": [
+     249,
+     168,
+     120
+    ],
+    "ffmpeg_hable": [
+     191,
+     125,
+     81
+    ],
+    "ffmpeg_clip": [
+     255,
+     210,
+     189
+    ],
+    "apple": [
+     195,
+     134,
+     88
+    ]
+   },
+   {
+    "patch": "bark",
+    "hlg_rgb_signal": [
+     0.76,
+     0.75,
+     0.71
+    ],
+    "filmcraft": [
+     232,
+     224,
+     199
+    ],
+    "ffmpeg_hable": [
+     163,
+     154,
+     139
+    ],
+    "ffmpeg_clip": [
+     254,
+     251,
+     238
+    ],
+    "apple": [
+     161,
+     152,
+     136
+    ]
+   },
+   {
+    "patch": "warm_hilite",
+    "hlg_rgb_signal": [
+     0.94,
+     0.86,
+     0.74
+    ],
+    "filmcraft": [
+     255,
+     187,
+     135
+    ],
+    "ffmpeg_hable": [
+     229,
+     159,
+     111
+    ],
+    "ffmpeg_clip": [
+     254,
+     243,
+     238
+    ],
+    "apple": [
+     252,
+     183,
+     131
+    ]
+   }
+  ]
+ },
+ "iphone": {
+  "sequenceColor": {
+   "autoToneMap": true,
+   "label": "Rec. 709",
+   "wideGamut": false,
+   "workingSpace": "rec709"
+  },
+  "frameStats": {
+   "filmcraft": {
+    "YAVG": 138.928,
+    "SATAVG": 19.3534,
+    "YHIGH": 203.0
+   },
+   "ffmpeg_hable": {
+    "YAVG": 105.961,
+    "SATAVG": 15.6104,
+    "YHIGH": 162.0
+   },
+   "ffmpeg_clip": {
+    "YAVG": 151.35,
+    "SATAVG": 16.0656,
+    "YHIGH": 229.0
+   },
+   "apple": {
+    "YAVG": 108.768,
+    "SATAVG": 15.2929,
+    "YHIGH": 169.0
+   }
+  },
+  "regions": {
+   "cheek": {
+    "filmcraft": [
+     245,
+     173,
+     119
+    ],
+    "ffmpeg_hable": [
+     189,
+     129,
+     84
+    ],
+    "ffmpeg_clip": [
+     253,
+     208,
+     184
+    ],
+    "apple": [
+     195,
+     136,
+     94
+    ]
+   },
+   "forehead": {
+    "filmcraft": [
+     255,
+     195,
+     152
+    ],
+    "ffmpeg_hable": [
+     229,
+     170,
+     128
+    ],
+    "ffmpeg_clip": [
+     255,
+     247,
+     242
+    ],
+    "apple": [
+     251,
+     192,
+     150
+    ]
+   },
+   "shirt": {
+    "filmcraft": [
+     91,
+     99,
+     143
+    ],
+    "ffmpeg_hable": [
+     60,
+     71,
+     110
+    ],
+    "ffmpeg_clip": [
+     93,
+     108,
+     165
+    ],
+    "apple": [
+     64,
+     74,
+     113
+    ]
+   },
+   "foliage": {
+    "filmcraft": [
+     109,
+     123,
+     92
+    ],
+    "ffmpeg_hable": [
+     77,
+     88,
+     64
+    ],
+    "ffmpeg_clip": [
+     116,
+     132,
+     97
+    ],
+    "apple": [
+     80,
+     90,
+     66
+    ]
+   },
+   "bark": {
+    "filmcraft": [
+     228,
+     214,
+     195
+    ],
+    "ffmpeg_hable": [
+     167,
+     155,
+     141
+    ],
+    "ffmpeg_clip": [
+     241,
+     232,
+     220
+    ],
+    "apple": [
+     166,
+     155,
+     142
+    ]
+   },
+   "tablet": {
+    "filmcraft": [
+     74,
+     74,
+     108
+    ],
+    "ffmpeg_hable": [
+     55,
+     56,
+     82
+    ],
+    "ffmpeg_clip": [
+     83,
+     84,
+     123
+    ],
+    "apple": [
+     59,
+     59,
+     88
+    ]
+   },
+   "ground": {
+    "filmcraft": [
+     234,
+     208,
+     175
+    ],
+    "ffmpeg_hable": [
+     171,
+     150,
+     123
+    ],
+    "ffmpeg_clip": [
+     249,
+     232,
+     211
+    ],
+    "apple": [
+     170,
+     150,
+     126
+    ]
+   }
+  }
+ }
+}

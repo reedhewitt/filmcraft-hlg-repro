@@ -1,0 +1,80 @@
+== 1. Model of main vs the measured FilmCraft column (G channel; patches decoded from their Y'CbCr codes) ==
+patch         measured   model  diff
+grey10         ( 18, 16, 19)   ( 16, 16, 16)  max|diff| 3
+grey20         ( 48, 45, 49)   ( 46, 46, 46)  max|diff| 3
+grey30         ( 77, 75, 78)   ( 77, 77, 77)  max|diff| 2
+grey40         (109,106,109)   (107,107,107)  max|diff| 2
+grey50         (139,136,139)   (137,137,137)  max|diff| 2
+grey60         (175,172,176)   (173,173,173)  max|diff| 3
+grey70         (215,212,215)   (213,213,213)  max|diff| 2
+grey80         (242,239,243)   (241,241,241)  max|diff| 2
+grey90         (254,251,255)   (253,253,253)  max|diff| 2
+grey100        (255,254,255)   (255,255,255)  max|diff| 1
+red75          (208,  1, 53)   (208,  0, 54)  max|diff| 1
+green75        (  0,212,121)   (  0,211,119)  max|diff| 2
+blue75         (  0, 33,148)   (  0, 33,146)  max|diff| 2
+cyan75         (  2,212,210)   (  0,214,208)  max|diff| 2
+magenta75      (213,  0,182)   (212,  0,183)  max|diff| 1
+yellow75       (230,226,  0)   (230,225,  0)  max|diff| 1
+skin           (215,141,120)   (217,140,122)  max|diff| 2
+foliage        ( 88,145, 74)   ( 88,145, 74)  max|diff| 0
+denim          ( 62, 79,114)   ( 63, 80,117)  max|diff| 3
+lit_skin       (249,168,120)   (247,170,119)  max|diff| 2
+bark           (232,224,199)   (233,223,202)  max|diff| 3
+warm_hilite    (255,187,135)   (255,186,136)  max|diff| 1
+largest per-channel difference over all patches: 3
+
+== 2. Fit of model C to Apple's grey ramp (mean RGB): best system gamma per display encode ==
+  encode srgb  best gamma 0.845  rms 0.91 codes
+  encode 2.4   best gamma 0.925  rms 2.26 codes
+  encode 2.2   best gamma 0.850  rms 2.33 codes
+  BT.2390 extended system gamma 1.2*1.111^log2(Lw/1000) at Lw = 100 cd/m2: 0.8459
+
+== 3. Grey ramp, 8-bit sRGB, vs Apple (mean RGB) ==
+HLG     Apple  hable            main          PR3312       C g=0.846        C g=0.78   inv OETF only
+10%        23     21         16(-7)         13(-10)         22(-1)         28(+5)         11(-12)
+20%        45     39         46(+1)         37(-8)         45(+0)         52(+7)         30(-15)
+30%        65     59         77(+12)         60(-5)         64(-1)         72(+7)         48(-17)
+40%        81     77        107(+26)         80(-1)         82(+1)         90(+9)         65(-16)
+50%        98     96        137(+39)        100(+2)         98(+0)        106(+8)         82(-16)
+60%       116    116        173(+57)        123(+7)        116(+0)        124(+8)        100(-16)
+70%       140    143        213(+73)        153(+13)        140(+0)        147(+7)        125(-15)
+80%       172    174        241(+69)        189(+17)        171(-1)        176(+4)        158(-14)
+90%       209    206        253(+44)        224(+15)        208(-1)        211(+2)        200(-9)
+100%      253    234        255(+2)        255(+2)        255(+2)        255(+2)        255(+2)
+rms vs Apple:    {'main': 42.1, 'PR3312': 9.7, 'C g=0.846': 0.9, 'C g=0.78': 6.4, 'inv OETF only': 13.8}
+worst vs Apple:  {'main': 73, 'PR3312': 17, 'C g=0.846': 2, 'C g=0.78': 9, 'inv OETF only': 17}  (handoff threshold: 6)
+
+== 4. Colour patches, 8-bit sRGB, vs Apple; d = largest per-channel difference (handoff threshold for real colours: 8) ==
+red75        apple (200,  0,  0)  | main (208,  0, 54) d 54  | PR3312 (182,  0, 46) d 46  | C g=0.846 desat (185,  0, 47) d 47  | C g=0.846 clip (213,  0,  0) d 13
+green75      apple (  3,161,  3)  | main (  0,211,119) d116  | PR3312 (  0,166, 93) d 90  | C g=0.846 desat (  0,153, 85) d 82  | C g=0.846 clip (  0,168,  0) d  7
+blue75       apple (  1,  1,169)  | main (  0, 33,146) d 32  | PR3312 (  0, 28,127) d 42  | C g=0.846 desat (  0, 32,142) d 31  | C g=0.846 clip (  0,  0,198) d 29
+cyan75       apple (  1,163,158)  | main (  0,214,208) d 51  | PR3312 (  0,168,163) d  5  | C g=0.846 desat (  0,153,149) d 10  | C g=0.846 clip (  0,166,159) d  3
+magenta75    apple (191,  0,165)  | main (212,  0,183) d 21  | PR3312 (183,  0,157) d  8  | C g=0.846 desat (183,  0,157) d  8  | C g=0.846 clip (206,  0,175) d 15
+yellow75     apple (159,154,  3)  | main (230,225,  0) d 71  | PR3312 (175,171,  0) d 17  | C g=0.846 desat (159,155,  0) d  3  | C g=0.846 clip (160,156,  0) d  3
+skin         apple (154, 97, 89)  | main (217,140,122) d 63  | PR3312 (160,105, 93) d  8  | C g=0.846 desat (157,100, 87) d  3  | C g=0.846 clip (157,100, 87) d  3
+foliage      apple ( 61,103, 53)  | main ( 88,145, 74) d 42  | PR3312 ( 67,106, 57) d  6  | C g=0.846 desat ( 63,105, 52) d  2  | C g=0.846 clip ( 63,105, 52) d  2
+denim        apple ( 49, 62, 92)  | main ( 63, 80,117) d 25  | PR3312 ( 50, 62, 89) d  3  | C g=0.846 desat ( 52, 66, 98) d  6  | C g=0.846 clip ( 52, 66, 98) d  6
+lit_skin     apple (195,134, 88)  | main (247,170,119) d 52  | PR3312 (213,150,109) d 21  | C g=0.846 desat (199,136, 94) d  6  | C g=0.846 clip (199,136, 94) d  6
+bark         apple (161,152,136)  | main (233,223,202) d 72  | PR3312 (177,170,155) d 19  | C g=0.846 desat (161,154,139) d  3  | C g=0.846 clip (161,154,139) d  3
+warm_hilite  apple (252,183,131)  | main (255,186,136) d  5  | PR3312 (255,202,153) d 22  | C g=0.846 desat (255,186,136) d  5  | C g=0.846 clip (255,186,136) d  5
+worst over the six real-world colours: {'main': 72, 'PR3312': 22, 'C g=0.846 desat': 6, 'C g=0.846 clip': 6}
+
+== 5. HLG reference white (75 % signal, 203 cd/m2 on a 1000 cd/m2 display) in working-linear and 8-bit sRGB ==
+  main           linear 0.784  8-bit 229
+  PR3312         linear 0.406  8-bit 171
+  C g=0.846      linear 0.325  8-bit 154
+  C g=0.78       linear 0.355  8-bit 161
+  inv OETF only  linear 0.265  8-bit 141
+  BT.2390 knee (1000 -> 203 cd/m2) starts at 88 cd/m2 = 0.43 working
+
+== 6. iPhone frame regions: raw HLG R'G'B' (ffmpeg, no tone map, 1080x1920 as repro.py) through the models vs measured ==
+   (mean of the signal then transform, so textured regions are only approximate)
+region            raw HLG signal     FC measured      model main           Apple         model C          PR3312
+cheek        (0.803,0.709,0.555)   (245,173,119)   (246,173,119)   (195,136, 94)   (196,137, 94)   (209,151,108)
+forehead     (0.946,0.879,0.783)   (255,195,152)   (255,195,152)   (251,192,150)   (254,194,151)   (255,210,168)
+shirt        (0.362,0.376,0.546)   ( 91, 99,143)   ( 90,100,146)   ( 64, 74,113)   ( 69, 77,115)   ( 68, 76,109)
+foliage      (0.415,0.446,0.349)   (109,123, 92)   (108,121, 92)   ( 80, 90, 66)   ( 81, 91, 68)   ( 81, 90, 70)
+bark         (0.762,0.745,0.706)   (228,214,195)   (234,218,198)   (166,155,142)   (163,152,138)   (179,168,154)
+tablet       (0.296,0.293,0.414)   ( 74, 74,108)   ( 73, 74,108)   ( 59, 59, 88)   ( 61, 62, 91)   ( 57, 58, 82)
+ground       (0.769,0.741,0.667)   (234,208,175)   (237,211,176)   (170,150,126)   (169,150,125)   (185,166,140)
